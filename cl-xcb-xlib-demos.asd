@@ -9,10 +9,16 @@
   :serial t
 
   :components
-  ((:module "glx"
+  ((:file "package")
+   (:file "utility")
+   (:module "glx"
     :pathname "glx"
     :serial t
     :components
-    ((:file "package")
-     (:file "utility")
-     (:file "gears")))))
+    ((:file "utility")
+     (:file "gears")))
+   (:module "cairo"
+    :pathname "cairo"
+    :serial t
+    :components
+    ((:file "simple")))))
