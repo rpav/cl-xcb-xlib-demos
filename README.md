@@ -4,7 +4,8 @@ This is a place for demos for cl-xcb-xlib.  Try these:
 
     (asdf:load-system :cl-xcb-xlib-demos)
     (xcb.clx.demos:run-gears)
-    (xcb.clx.demos:cairo-run 'xcb.clx.demos:cairo-arc)
+    (xcb.clx.demos:cairo-run 'cairo-demos:arc1)
+    (xcb.clx.demos:cairo-run 'cairo-demos:mesh1)
 
 ## glxgears
 
@@ -14,6 +15,11 @@ for direct GLX.  You can optionally specify :SCREEN N to make it run
 on a different head (useful if one has faster GL than the default).
 
 ## cairo-arc
+
+**Updated:** Cairo demos are now going to be in cl-cairo2 itself.
+They can be run with only cl-cairo2 using an image-surface, or using
+cairo-xcb.  The stuff below still applies, but the drawing code is
+in cl-cairo2.
 
 The first sample adapted from cairographics.org/samples/.  While the
 output isn't particularly interesting, it illustrates a number of
